@@ -55,3 +55,11 @@ credentials.json
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Keys and Terraform / OpenTofu
+*.key
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*.tfvars
