@@ -12,6 +12,10 @@ What changed and why.
 
 For UI changes only.
 
+## Cost impact
+
+None, or describe what changed in docs/cost-plan.md.
+
 ## Definition of Done
 
 - [ ] Code merged to main through CI
