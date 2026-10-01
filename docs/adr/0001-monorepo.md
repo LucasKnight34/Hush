@@ -10,7 +10,7 @@ Accepted
 
 ## Context
 
-HUSH has a Spring Boot backend, a SwiftUI iOS app, a curated task dataset, and project documentation. Two people work on it part time, and the API and its client change together often.
+HUSH has a Spring Boot backend, a SwiftUI iOS app, a curated task dataset, infrastructure code, and project documentation. Two people work on it part time, and the API and its client change together often.
 
 ## Options considered
 
@@ -19,7 +19,7 @@ HUSH has a Spring Boot backend, a SwiftUI iOS app, a curated task dataset, and p
 
 ## Decision
 
-Use a single repository. Backend, iOS, dataset, and docs live together so one PR can change an API and its client, and reviewers see the whole system in one place.
+Use a single repository. Backend, iOS, dataset, infra, and docs live together so one PR can change an API and its client, and reviewers see the whole system in one place.
 
 ## Consequences
 

@@ -7,3 +7,4 @@
 - Do no work outside the ticket's scope.
 - New technical choices need a spike ticket first.
 - Decisions go in `docs/adr`.
+- Development must cost $0. Do not add or reference AWS or any paid service. Check `docs/cost-plan.md` before adding any service and update it when one is added.
