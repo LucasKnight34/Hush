@@ -2,7 +2,7 @@
 
 **Status:** Draft. These are archetypes written from the product brief, not research. Sarah needs to confirm that the planner persona reflects her real experience (HUSH-30). Details marked "to confirm" are guesses.
 
-In most couples one person ends up carrying the invisible work in their head, and the other helps when asked. HUSH is built for both roles. The two people may swap roles for different kinds of task.
+In most couples one person ends up carrying the invisible work in their head, and the other helps when asked. HUSH is built for both roles. The roles describe how someone behaves for a particular task. They are not labels for a person (see "Roles belong to tasks, not people" below).
 
 ## The planner
 
@@ -57,7 +57,20 @@ The partner must be able to read a reminder, understand it, and act on it in fiv
 - Opens the app only occasionally, to see what is coming up.
 - Is not asked about tasks that belong to the planner.
 
+## Roles belong to tasks, not people
+
+Planner and partner are two hats. Most of the time Sarah wears the planner hat and Lucas wears the partner hat, but not always. Who remembers a task depends on who cares about it. Lucas tends to remember the car and fixing things around the house. Sarah tends to remember anything about the dog and the finances, and brings those up.
+
+So HUSH must not shoehorn either person into a role. The design rules that follow:
+
+- **No role setting.** There is no "I am the planner" option on a profile, and no per-person role stored anywhere.
+- **The role attaches to the task.** For each task, one person is the owner, who gets the full reminder flow. The other person is the backup, who is only told if the task goes overdue. Each person is the planner for some tasks and the partner for others.
+- **Sensible defaults by category.** A household can set a default owner per category, for example car and home repair to Lucas, pets and finances to Sarah. New tasks start with that owner. It is only a default and can be changed on any task.
+- **Handing off is one tap.** Either person can take a task or hand it over from the task screen and from the lock screen ("I'll take it"), so ownership can follow who actually cares.
+- **Avoid comparing people.** Any score or summary (the House Health Score, epic E16) should show how the household is doing, or how a category is doing, and not rank who does more. A per-person ranking would turn a habit into a permanent role.
+
 ## Open questions
 
 - Sarah: does the planner section match your real experience? What would you change?
-- Do Lucas and Sarah each play both roles, depending on the task?
+- Are category defaults the right way to start, or should HUSH learn the owner from who creates or completes tasks?
+- Should the backup be told only when a task is overdue, or also when it is due soon?
