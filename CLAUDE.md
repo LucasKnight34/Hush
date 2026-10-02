@@ -8,3 +8,4 @@
 - New technical choices need a spike ticket first.
 - Decisions go in `docs/adr`.
 - Development must cost $0. Do not add or reference AWS or any paid service. Check `docs/cost-plan.md` before adding any service and update it when one is added.
+- Spike findings go to the HUSH Confluence space (key HUSH) as a page under "Spikes", titled "Spike HUSH-123: Short title". Link the page in a comment on the spike ticket. Decisions stay in `docs/adr`.
