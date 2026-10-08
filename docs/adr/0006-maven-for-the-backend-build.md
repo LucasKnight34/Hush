@@ -23,7 +23,7 @@ Both tools are free and open source, so cost does not separate them (docs/cost-p
 
 Use Maven for the backend.
 
-The prototype was identical under both tools: two modules, a Spring Modulith `verify()` test, a Spotless check with Google Java Format, and one Testcontainers test against Postgres 16. Both passed, and both failed a deliberately misformatted file in the Spotless check. A warm clean build took about 7 seconds with Maven and about 9 seconds with Gradle (without the Gradle daemon), so speed does not decide this.
+The prototype was identical under both tools: two modules, a Spring Modulith `verify()` test, a Spotless check with Google Java Format, and one Testcontainers test against Postgres 16. Both passed, and both failed a deliberately misformatted file in the Spotless check. A warm clean build took about 7 seconds with Maven and about 9 seconds with Gradle (without the Gradle daemon), so speed does not decide this. The same Maven prototype also passed in GitHub Actions on `ubuntu-latest` (Temurin 21, `actions/setup-java` Maven cache) in 48 seconds, with the Postgres container running on the hosted runner and no extra setup.
 
 The reasons for Maven:
 - ADR-0004 and ADR-0005 were proven on Maven, so choosing it means no migration and no open "not verified on Gradle" caveat.
@@ -40,7 +40,8 @@ Conventions:
 
 - HUSH-54, HUSH-57, and HUSH-58 change from Gradle to Maven: `./gradlew check build` becomes `./mvnw verify`, and the Spotless setup uses `spotless-maven-plugin`.
 - The HUSH-126 and HUSH-127 prototypes need no change.
-- Spotless in Gradle is not needed, but Spotless on Maven is a separate plugin, so its version is pinned in the POM.
+- The Spotless Maven plugin version is pinned in the POM so formatting results stay stable.
 - The XML is more verbose than Gradle's Kotlin DSL. Revisit only if the backend is split into several deployable modules, where Gradle's multi-project support becomes worth the migration.
+- `actions/setup-java@v4` and `actions/checkout@v4` showed deprecation warnings in the run, so HUSH-58 should use the current major versions (setup-java v5).
 - Not verified: the Docker image build for HUSH-62 (Spring Boot buildpacks on ARM64), and JaCoCo coverage for HUSH-218. Neither was part of this prototype.
 - Not measured: how often each tool appears in job postings. No reliable data source was used, so this did not influence the decision.
